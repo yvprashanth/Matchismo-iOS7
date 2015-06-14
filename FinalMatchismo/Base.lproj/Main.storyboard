@@ -233,6 +233,32 @@
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2yO-Qe-gKF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-rk-7Xi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" backgroundImage="cardback">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="276" y="332" width="64" height="96"/>
+                                </variation>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xSm-Sp-rHb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-jq-Hzn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" backgroundImage="cardback">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="204" y="332" width="64" height="96"/>
+                                </variation>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lOT-Xi-2vF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -254,6 +280,8 @@
                                 <exclude reference="vb8-r4-gkq"/>
                                 <exclude reference="zSo-sO-VPh"/>
                                 <exclude reference="NVf-Yl-Qdj"/>
+                                <exclude reference="vbM-rk-7Xi"/>
+                                <exclude reference="Dco-jq-Hzn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -275,11 +303,29 @@
                                 <include reference="vb8-r4-gkq"/>
                                 <include reference="zSo-sO-VPh"/>
                                 <include reference="NVf-Yl-Qdj"/>
+                                <include reference="vbM-rk-7Xi"/>
+                                <include reference="Dco-jq-Hzn"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="flipsCount" destination="b3n-4m-fP1" id="6aQ-cI-hti"/>
+                        <outletCollection property="cardButtons" destination="vbM-rk-7Xi" id="OIX-Gm-UAI"/>
+                        <outletCollection property="cardButtons" destination="Dco-jq-Hzn" id="Bs3-kV-qJY"/>
+                        <outletCollection property="cardButtons" destination="vb8-r4-gkq" id="CMc-3F-xcE"/>
+                        <outletCollection property="cardButtons" destination="PQg-zL-wu2" id="Tc1-82-4S9"/>
+                        <outletCollection property="cardButtons" destination="RqY-rb-b9b" id="q2B-Ix-6za"/>
+                        <outletCollection property="cardButtons" destination="Gvi-a3-Sm4" id="tcr-Nw-gim"/>
+                        <outletCollection property="cardButtons" destination="ITz-S3-5A3" id="EDi-jX-BB8"/>
+                        <outletCollection property="cardButtons" destination="Ggg-wd-NN3" id="dEi-RL-z49"/>
+                        <outletCollection property="cardButtons" destination="k78-ft-akH" id="DCL-l0-FLh"/>
+                        <outletCollection property="cardButtons" destination="mcT-rp-HjO" id="K0p-hV-Jok"/>
+                        <outletCollection property="cardButtons" destination="ULM-tc-ar0" id="eZb-zU-E8F"/>
+                        <outletCollection property="cardButtons" destination="MIq-YL-U5c" id="xze-ue-2l9"/>
+                        <outletCollection property="cardButtons" destination="R69-7B-JlQ" id="xca-XY-fnc"/>
+                        <outletCollection property="cardButtons" destination="Dh3-Bl-6fT" id="sx9-bv-Ki6"/>
+                        <outletCollection property="cardButtons" destination="e3A-rV-pXg" id="HRz-xW-uFp"/>
+                        <outletCollection property="cardButtons" destination="YOC-0Z-T3j" id="7x8-9S-qYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -23,7 +23,6 @@
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
 
-
 -(int)match:(NSArray *)otherCards{
     int score = 0;
     if ([otherCards count] == 1) {
@@ -36,7 +35,6 @@
     }
     return score;
 }
-
 
 -(NSString *) suit
 {
