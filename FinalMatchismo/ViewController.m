@@ -23,6 +23,21 @@
 
 @implementation ViewController
 
+- (IBAction)resetButton:(UIButton *)sender
+{
+    if (_game) {
+        _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[self createDeck]];
+    }
+    for (UIButton *cardButton in self.cardButtons) {
+             NSUInteger cardButtonIndex = [self.cardButtons indexOfObject:cardButton];
+             Card *card = [self.game cardAtIndex:cardButtonIndex];
+             [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+             [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
+             cardButton.enabled = true;
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score : %ld", (long)0];
+    }
+}
+
 -(Deck *) deck{
     if (!_deck) {
         _deck = [self createDeck];
@@ -65,7 +80,6 @@
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
         self.scoreLabel.text = [NSString stringWithFormat:@"Score : %ld", (long)self.game.score];
-//        self.scoreLabel.text = [NSString stringWithFormat:@"Score : %d", self.game.score];
     }
 }
 
@@ -76,18 +90,5 @@
 - (UIImage *)backgroundImageForCard : (Card *)card{
     return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
 }
-
-//if([sender.currentTitle length]){
-//    [sender setBackgroundImage:[UIImage imageNamed:@"cardback"] forState:UIControlStateNormal];
-//    [sender setTitle:@"" forState:UIControlStateNormal];
-//}
-//else
-//{
-//    Card *randomCard = [self.deck drawRandomCard];
-//    if (randomCard) {
-//        [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"] forState:UIControlStateNormal];
-//        [sender setTitle:randomCard.contents forState:UIControlStateNormal];
-//    }
-//}
 
 @end
