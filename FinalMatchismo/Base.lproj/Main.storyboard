@@ -259,6 +259,15 @@
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lOT-Xi-2vF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF7-US-Rp4">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="215" y="551" width="169" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -282,6 +291,7 @@
                                 <exclude reference="NVf-Yl-Qdj"/>
                                 <exclude reference="vbM-rk-7Xi"/>
                                 <exclude reference="Dco-jq-Hzn"/>
+                                <exclude reference="jF7-US-Rp4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -305,11 +315,13 @@
                                 <include reference="NVf-Yl-Qdj"/>
                                 <include reference="vbM-rk-7Xi"/>
                                 <include reference="Dco-jq-Hzn"/>
+                                <include reference="jF7-US-Rp4"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="flipsCount" destination="b3n-4m-fP1" id="6aQ-cI-hti"/>
+                        <outlet property="scoreLabel" destination="jF7-US-Rp4" id="eoL-bU-FJM"/>
                         <outletCollection property="cardButtons" destination="vbM-rk-7Xi" id="OIX-Gm-UAI"/>
                         <outletCollection property="cardButtons" destination="Dco-jq-Hzn" id="Bs3-kV-qJY"/>
                         <outletCollection property="cardButtons" destination="vb8-r4-gkq" id="CMc-3F-xcE"/>

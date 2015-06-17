@@ -19,4 +19,6 @@
 -(void)chooseCardAtIndex : (NSUInteger)index;
 -(Card *)cardAtIndex : (NSUInteger)index;
 
+@property (nonatomic, readwrite) NSInteger score;
+
 @end
